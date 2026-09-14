@@ -5,7 +5,37 @@
 Based in Pakistan. I build systems that are measured rather than demoed: every repository
 below states what it does, what it refuses to do, and the numbers behind both.
 
-**28 repositories · 1,414 tests · every dataset public and cited.**
+**28 repositories · 60 projects · 1,414 tests · every dataset public and cited.**
+
+<details open>
+<summary><b>28 repositories, but 60 projects — four repos hold more than one</b></summary>
+
+<br>
+
+| Repository | Projects | What is inside |
+|---|---:|---|
+| **[machine-learning](https://github.com/hammas159/machine-learning)** | **20** | One per statistical mistake — backtest overfitting, target leakage, overlapping windows, price elasticity, spurious regression, encoding leakage, market basket, and thirteen more |
+| **[mcp-lab](https://github.com/hammas159/mcp-lab)** | **6** | MCP red-team, HotpotQA multi-hop RAG, BFCL tool calling, SWE-bench agent, TruthfulQA hallucination, FEVER verification |
+| **[langchain-lab](https://github.com/hammas159/langchain-lab)** | **5** | Structured output, retrieval absences, memory recall, injection defence, judge bias |
+| **[langgraph-lab](https://github.com/hammas159/langgraph-lab)** | **5** | Revision loops, router misroute, parallel merge, checkpoint resume, supervisor handoff |
+| *the other 24 repositories* | **24** | One project each |
+| | **60** | |
+
+```mermaid
+pie showData
+    title 60 projects across 28 repositories
+    "machine-learning" : 20
+    "24 single-project repos" : 24
+    "mcp-lab" : 6
+    "langchain-lab" : 5
+    "langgraph-lab" : 5
+```
+
+Four repositories are **labs** — a set of projects sharing one theme, one environment and one
+test suite, because splitting five variations on the same idea across five repositories would
+make each of them look thinner than it is. Everything else is one project per repository.
+
+</details>
 
 ---
 
