@@ -5,7 +5,7 @@
 Based in Pakistan. I build systems that are measured rather than demoed: every repository
 below states what it does, what it refuses to do, and the numbers behind both.
 
-**20 repositories · 1,027 tests · every dataset public and cited.**
+**28 repositories · 1,414 tests · every dataset public and cited.**
 
 ---
 
@@ -49,6 +49,20 @@ scratch by every project that needs it.
 | **[llm-observability-platform](https://github.com/hammas159/llm-observability-platform)** | Monitoring built for LLM applications | Cost per *success* rather than per call, latency percentiles that exclude cache hits, and prompt drift detected by PSI **without ever storing a prompt**. |
 | **[model-serving-platform](https://github.com/hammas159/model-serving-platform)** | Multi-model serving with A/B, canary and shadow traffic | Auto-rollback that knows the difference between a bad canary and an upstream outage — the distinction that decides whether rolling back helps. |
 
+### Benchmarks and evaluation
+
+Measuring whether a benchmark measures what it claims to. Each of these started as a
+question about a widely used evaluation and ended with a number.
+
+| | What it is | The interesting part |
+|---|---|---|
+| **[swebench-localization](https://github.com/hammas159/swebench-localization)** | How much of SWE-bench is retrieval rather than reasoning | **51.3% of instances never name the file you have to fix** — not the path, not the filename, not the module. A single score cannot say which half failed. |
+| **[code-eval-harness](https://github.com/hammas159/code-eval-harness)** | The same HumanEval generations, scored five ways | **Identical outputs score 0% or 94%** depending only on how code is extracted. `prompt+body` — the *original* protocol — scores chat models at zero, silently. |
+| **[devign-leakage](https://github.com/hammas159/devign-leakage)** | Whether Devign's test set is already in its training set | Cross-split leakage is **smaller than assumed** — a negative result, reported. But **every exact duplicate inside the test set carries conflicting labels**. |
+| **[docstring-drift](https://github.com/hammas159/docstring-drift)** | Docstrings that document parameters their function does not have | **101 across eight major libraries.** The first version reported ~400 in scipy alone and almost none were real; the fixes are in the repo with a regression test each. |
+| **[commit-history-forensics](https://github.com/hammas159/commit-history-forensics)** | Detecting fabricated git history | Faking `GIT_COMMITTER_DATE` defeats the timestamp signal — and the forgery is **still caught**, because it edits exactly one file in every commit and real work does not. |
+| **[mcp-lab](https://github.com/hammas159/mcp-lab)** | Six agentic projects on real benchmarks, all local | **Chain-of-thought made every model worse on TruthfulQA** — the 7B lost 35 points. Not one improved. |
+
 ### Machine learning and statistics
 
 | | What it is | The interesting part |
@@ -91,13 +105,19 @@ database role, a parse tree, or a budget the agent cannot reach.
 **Limits stated plainly.** Every README has a section on what the project does not do. A tool
 that overclaims wastes the time of everyone who tries it.
 
+**Wrong answers are reported, not tuned away.** Several of these repositories exist because a
+first result was wrong and the investigation was more interesting than the fix — a scanner
+whose first run produced 400 false positives, a leakage audit that disproved its own premise,
+a test harness that scored working models at zero.
+
 ---
 
 ### Stack
 
 `Python` · `FastAPI` · `PostgreSQL + pgvector` · `Redis` · `Docker` · `uv` · `PyTorch` ·
 `scikit-learn` · `pandas` / `NumPy` / `statsmodels` · `sentence-transformers` ·
-`Ollama` / `Claude` / `HuggingFace` behind one interface · `GitHub Actions`
+`Ollama` / `Claude` / `HuggingFace` behind one interface · `Streamlit` / `Altair` ·
+`Model Context Protocol` · `GitHub Actions`
 
 ---
 
