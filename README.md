@@ -5,47 +5,77 @@
 Based in Pakistan. I build systems that are measured rather than demoed: every repository
 below states what it does, what it refuses to do, and the numbers behind both.
 
-**32 repositories · 160 projects · 3,480 test functions · every dataset public and cited.**
-
-<details open>
-<summary><b>32 repositories, but 160 projects — eight repos hold more than one</b></summary>
-
-<br>
-
-| Repository | Projects | What is inside |
-|---|---:|---|
-| **[classical-computer-vision](https://github.com/hammasbuilds/classical-computer-vision)** | **57** | Classical CV measured against itself — no deep learning, no training, no GPU |
-| **[nlp-llm-ml](https://github.com/hammasbuilds/nlp-llm-ml)** | **23** | Classic NLP techniques on one corpus — embeddings, reranking, topic models, tokenisation, Urdu morphology |
-| **[machine-learning](https://github.com/hammasbuilds/machine-learning)** | **20** | One per statistical mistake — backtest overfitting, target leakage, overlapping windows, spurious regression, and sixteen more |
-| **[agentic-ai-lab](https://github.com/hammasbuilds/agentic-ai-lab)** | **11** | Agent infrastructure tools, each built around something that turned out to be wrong |
-| **[rag-llm-eval](https://github.com/hammasbuilds/rag-llm-eval)** | **9** | RAG techniques measured as retrieval, with no language model in the loop |
-| **[mcp-llm-rag](https://github.com/hammasbuilds/mcp-llm-rag)** | **6** | MCP red-team, HotpotQA multi-hop RAG, BFCL tool calling, SWE-bench agent, TruthfulQA, FEVER |
-| **[langgraph-llm](https://github.com/hammasbuilds/langgraph-llm)** | **5** | Revision loops, router misroute, parallel merge, checkpoint resume, supervisor handoff |
-| **[langchain-llm](https://github.com/hammasbuilds/langchain-llm)** | **5** | Structured output, retrieval absences, memory recall, injection defence, judge bias |
-| *the other 24 repositories* | **24** | One project each |
-| | **160** | |
-
-```mermaid
-pie showData
-    title 160 projects across 32 repositories
-    "classical-computer-vision" : 57
-    "24 single-project repos" : 24
-    "nlp-llm-ml" : 23
-    "machine-learning" : 20
-    "agentic-ai-lab" : 11
-    "rag-llm-eval" : 9
-    "mcp-llm-rag" : 6
-    "langgraph-llm" : 5
-    "langchain-llm" : 5
-```
-
-Eight repositories are **labs** — a set of projects sharing one theme, one environment and one
-test suite, because splitting twenty variations on the same idea across twenty repositories
-would make each of them look thinner than it is. Everything else is one project per repository.
-
-</details>
+**53 repositories · 230 projects · 5,161 test functions · every dataset public and cited.**
 
 ---
+
+## Nine labs — 186 of the 230 projects
+
+A lab is a set of projects sharing one theme, one environment and one test suite. Splitting
+twenty variations on the same idea across twenty repositories would make each look thinner
+than it is.
+
+| # | Lab | Projects | What is inside |
+|---|---|---:|---|
+| [**01**](https://github.com/hammasbuilds/classical-computer-vision) | [**classical-computer-vision**](https://github.com/hammasbuilds/classical-computer-vision) | **57** | Classical CV measured against itself — no deep learning, no training, no GPU |
+| [**02**](https://github.com/hammasbuilds/agentic-ai-llm) | [**agentic-ai-llm**](https://github.com/hammasbuilds/agentic-ai-llm) | **41** | Ten measurement apps, eleven agent-infrastructure tools, twenty business agents |
+| [**03**](https://github.com/hammasbuilds/nlp-llm-ml) | [**nlp-llm-ml**](https://github.com/hammasbuilds/nlp-llm-ml) | **23** | Classic NLP on one corpus — embeddings, reranking, topic models, tokenisation, Urdu morphology |
+| [**04**](https://github.com/hammasbuilds/machine-learning) | [**machine-learning**](https://github.com/hammasbuilds/machine-learning) | **20** | One project per statistical mistake — backtest overfitting, leakage, spurious regression |
+| [**05**](https://github.com/hammasbuilds/code-llm-lab) | [**code-llm-lab**](https://github.com/hammasbuilds/code-llm-lab) | **20** | Coder models measured on MBPP, HumanEval and Devign — size curves, self-debug ceilings, mutation kill rates |
+| [**06**](https://github.com/hammasbuilds/rag-llm-eval) | [**rag-llm-eval**](https://github.com/hammasbuilds/rag-llm-eval) | **9** | RAG techniques measured as retrieval, with almost no language model in the loop |
+| [**07**](https://github.com/hammasbuilds/mcp-llm-rag) | [**mcp-llm-rag**](https://github.com/hammasbuilds/mcp-llm-rag) | **6** | MCP red-team, multi-hop RAG, tool calling, SWE-bench agent, TruthfulQA, FEVER |
+| [**08**](https://github.com/hammasbuilds/langgraph-llm) | [**langgraph-llm**](https://github.com/hammasbuilds/langgraph-llm) | **5** | Revision loops, router misroute, parallel merge, checkpoint resume, supervisor handoff |
+| [**09**](https://github.com/hammasbuilds/langchain-llm) | [**langchain-llm**](https://github.com/hammasbuilds/langchain-llm) | **5** | Structured output, retrieval absences, memory recall, injection defence, judge bias |
+
+---
+
+## Twenty single-project repositories
+
+The rest are one project per repository. These twenty are the ones I would open first.
+
+| # | Repository | The interesting part |
+|---|---|---|
+| [**01**](https://github.com/hammasbuilds/urdunlp) | [**urdunlp**](https://github.com/hammasbuilds/urdunlp) | Urdu and Roman Urdu text processing. Pure Python, zero dependencies, no model downloads |
+| [**02**](https://github.com/hammasbuilds/blast-radius) | [**blast-radius**](https://github.com/hammasbuilds/blast-radius) | What a dependency upgrade actually changes — including what nothing warns you about |
+| [**03**](https://github.com/hammasbuilds/flake-detective) | [**flake-detective**](https://github.com/hammasbuilds/flake-detective) | A flaky test is not a problem to rerun. It is a dependency nobody declared |
+| [**04**](https://github.com/hammasbuilds/suite-auditor) | [**suite-auditor**](https://github.com/hammasbuilds/suite-auditor) | What your test suite would not notice — with the input that proves it |
+| [**05**](https://github.com/hammasbuilds/notebook-to-package) | [**notebook-to-package**](https://github.com/hammasbuilds/notebook-to-package) | A notebook is a transcript of a session, not a program. This turns one into a package |
+| [**06**](https://github.com/hammasbuilds/clcuv-surveillance) | [**clcuv-surveillance**](https://github.com/hammasbuilds/clcuv-surveillance) | Which variant is winning, why, and whether our diagnostics can still see it |
+| [**07**](https://github.com/hammasbuilds/cartographer) | [**cartographer**](https://github.com/hammasbuilds/cartographer) | The import graph is a claim about how a codebase is organised. The history is the evidence |
+| [**08**](https://github.com/hammasbuilds/test-impact-oracle) | [**test-impact-oracle**](https://github.com/hammasbuilds/test-impact-oracle) | Run only the tests a change could affect — and measure what that skips, not just what it saves |
+| [**09**](https://github.com/hammasbuilds/assay-drift) | [**assay-drift**](https://github.com/hammasbuilds/assay-drift) | Does this PCR test still match what is circulating? |
+| [**10**](https://github.com/hammasbuilds/repo-surgeon) | [**repo-surgeon**](https://github.com/hammasbuilds/repo-surgeon) | A codebase migration tool whose output is the changes it refused |
+| [**11**](https://github.com/hammasbuilds/primer-designer) | [**primer-designer**](https://github.com/hammasbuilds/primer-designer) | Diagnostic PCR primers that survive a virus mutating — and an alert when they stop |
+| [**12**](https://github.com/hammasbuilds/perf-hunter) | [**perf-hunter**](https://github.com/hammasbuilds/perf-hunter) | A performance gate is only worth having if you know how often it cries wolf |
+| [**13**](https://github.com/hammasbuilds/docstring-drift) | [**docstring-drift**](https://github.com/hammasbuilds/docstring-drift) | Documentation that quietly stopped being true |
+| [**14**](https://github.com/hammasbuilds/doc-intelligence-api) | [**doc-intelligence-api**](https://github.com/hammasbuilds/doc-intelligence-api) | Document processing that sends a human one question, not one document |
+| [**15**](https://github.com/hammasbuilds/ledger-truth) | [**ledger-truth**](https://github.com/hammasbuilds/ledger-truth) | 7.6% of FinQA questions need a number that appears nowhere in the filing they were written against |
+| [**16**](https://github.com/hammasbuilds/pr-referee) | [**pr-referee**](https://github.com/hammasbuilds/pr-referee) | A code reviewer that only says what it can prove, and measures itself against one that guesses |
+| [**17**](https://github.com/hammasbuilds/swebench-localization) | [**swebench-localization**](https://github.com/hammasbuilds/swebench-localization) | Is the answer even in the question? |
+| [**18**](https://github.com/hammasbuilds/qlora-finetune-suite) | [**qlora-finetune-suite**](https://github.com/hammasbuilds/qlora-finetune-suite) | The parts of fine-tuning that go wrong before the GPU is ever touched |
+| [**19**](https://github.com/hammasbuilds/pak-law-assistant) | [**pak-law-assistant**](https://github.com/hammasbuilds/pak-law-assistant) | Legal QA over Pakistani statutes that will not cite a repealed provision |
+| [**20**](https://github.com/hammasbuilds/llm-observability-platform) | [**llm-observability-platform**](https://github.com/hammasbuilds/llm-observability-platform) | Monitoring built for LLM applications, not retrofitted from web monitoring |
+
+---
+
+---
+
+### Also measured
+
+Nine more single-project repositories, each a benchmark taken apart until it said something
+it was not built to say.
+
+| # | Repository | What it found |
+|---|---|---|
+| [**01**](https://github.com/hammasbuilds/faithful) | [**faithful**](https://github.com/hammasbuilds/faithful) | Four ways a summarisation faithfulness checker looks better than it is — on 10,066 human judgements |
+| [**02**](https://github.com/hammasbuilds/doubt) | [**doubt**](https://github.com/hammasbuilds/doubt) | No model that ignores the evidence can score above 0.502 on VitaminC |
+| [**03**](https://github.com/hammasbuilds/outcome) | [**outcome**](https://github.com/hammasbuilds/outcome) | The ECtHR outcome benchmark scores 0.859 micro-F1 if you ignore the facts entirely |
+| [**04**](https://github.com/hammasbuilds/trial-match) | [**trial-match**](https://github.com/hammasbuilds/trial-match) | The registry appears to contradict itself on 4.9% of trials. Hand-checking 48 disagreed |
+| [**05**](https://github.com/hammasbuilds/contract-reader) | [**contract-reader**](https://github.com/hammasbuilds/contract-reader) | A contract reader truncating to 8,000 characters sees 41% of the answers |
+| [**06**](https://github.com/hammasbuilds/urdu-desk) | [**urdu-desk**](https://github.com/hammasbuilds/urdu-desk) | 9.2% of BBC Urdu articles are typed with Arabic letters standing in for Urdu ones |
+| [**07**](https://github.com/hammasbuilds/router-14b) | [**router-14b**](https://github.com/hammasbuilds/router-14b) | The weaker model is good enough 53.6% of the time — and a character count predicts when |
+| [**08**](https://github.com/hammasbuilds/mbpp-false-accepts) | [**mbpp-false-accepts**](https://github.com/hammasbuilds/mbpp-false-accepts) | MBPP gives each problem three assert statements. Three asserts accept a lot of wrong code |
+| [**09**](https://github.com/hammasbuilds/trace-to-patch) | [**trace-to-patch**](https://github.com/hammasbuilds/trace-to-patch) | A failing test to a verified patch — or an honest "could not reproduce" |
 
 ### What I work on
 
@@ -77,7 +107,7 @@ scratch by every project that needs it.
 
 | | Stack | The interesting part |
 |---|---|---|
-| **[agentic-ai-lab](https://github.com/hammasbuilds/agentic-ai-lab)** | Python · NiceGUI · marimo · zero runtime dependencies | Eleven agent-infrastructure tools, **zero LLM calls** — mutation testing, AST-verified migration, rollback proving, span-cited contract reading. Each built around something that turned out to be wrong. |
+| **[agentic-ai-llm](https://github.com/hammasbuilds/agentic-ai-llm)** | Python · NiceGUI · marimo · zero runtime dependencies | Eleven agent-infrastructure tools, **zero LLM calls** — mutation testing, AST-verified migration, rollback proving, span-cited contract reading. Each built around something that turned out to be wrong. |
 | **[bounded-agent-runtime](https://github.com/hammasbuilds/bounded-agent-runtime)** | FastAPI · Pydantic · Anthropic API · Typer | A chaos suite replaces the agent with something guaranteed to misbehave, then asserts the irreversible action **did not happen** — not that the runtime said it stopped. |
 | **[sql-analyst-agent](https://github.com/hammasbuilds/sql-analyst-agent)** | FastAPI · PostgreSQL · SQLGlot · Anthropic API | Three safety layers, and **the prompt is the weakest**. CI attempts five real writes as the agent's role on every push and fails the build if any succeeds. |
 | **[enterprise-ops-crew](https://github.com/hammasbuilds/enterprise-ops-crew)** | Python · multi-agent playbooks · approval gates | It stops before anything irreversible. Business-hours SLAs, playbook execution, approval gates, full audit trail. |
@@ -129,7 +159,7 @@ question about a widely used evaluation and ended with a number.
 |---|---|---|
 | **[incident-copilot](https://github.com/hammasbuilds/incident-copilot)** | Python · Drain templates · robust z-score (MAD) | Turns forty alarms into one incident with a suspect. The anomaly detector is robust to the outliers it is looking for. |
 | **[doc-intelligence-api](https://github.com/hammasbuilds/doc-intelligence-api)** | FastAPI · Pydantic · Jinja2 · confidence routing | Sends a human **one question, not one document**. Cross-field arithmetic validation catches what OCR confidence never will. Pakistani formats: CNIC, NTN, STRN, PK IBAN. |
-| **[urdu-nlp-toolkit](https://github.com/hammasbuilds/urdu-nlp-toolkit)** | Python · Unicode normalisation · transliteration | The same Urdu word has several byte encodings that render identically. Without normalising them, every downstream model learns three versions of one word. |
+| **[urdunlp](https://github.com/hammasbuilds/urdunlp)** | Python · Unicode normalisation · transliteration | The same Urdu word has several byte encodings that render identically. Without normalising them, every downstream model learns three versions of one word. |
 
 ### Computational biology
 
